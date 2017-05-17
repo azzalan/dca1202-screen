@@ -22,7 +22,8 @@ public:
   // desenha um pixel da matriz usando o caratere
   // guardado em 'brush'
   void setPixel(int x, int y);
-
+  int getNlin() {return nlin;}
+  int getNcol() {return ncol;}
   // limpa a tela
   void clear();
 

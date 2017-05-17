@@ -9,6 +9,8 @@
 #include "reta.cpp"
 #include "retangulo.h"
 #include "retangulo.cpp"
+#include "circulo.h"
+#include "circulo.cpp"
 #include <iostream>     // std::cout, std::ostream, std::ios
 #include <fstream>      // std::filebuf
 #include <string>
@@ -22,6 +24,7 @@ int main(){
   bool lineEnd;
   Screen screen;
   string line, partial;
+  // Circulo circulo(10, 10, 5);
   // entrada
   ifstream myfile ("entrada.txt");
   if (myfile.is_open())

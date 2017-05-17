@@ -69,6 +69,13 @@ Limpa a tela<br/>
 <b>void setBrush(char brush)</b><br/>
 Muda o caractere de desenho<br/>
 
+<b>int getNlin()</b><br/>
+Retorna número de linhas.<br/>
+
+<b>int getNcol()</b><br/>
+Retorna número de colunas.<br/>
+
+
 <h4 id="screenx">-Funções auxiliares</h4>
 <b>friend print(Screen &t)</b><br/>
 Imprime a tela no console.<br/>

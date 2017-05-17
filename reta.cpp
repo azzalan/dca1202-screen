@@ -31,8 +31,6 @@ Reta::Reta(int p1x, int p1y, int p2x, int p2y){
   l = inicioY;
   count = 0;
   for(int j=0; j<tamX; j++){
-    cout << "j: " << j << endl;
-    cout << "l: " << l << endl;
     linhas[l][j] = true;
     count += passoY;
     if(count>0) tamCount = count;
@@ -40,14 +38,12 @@ Reta::Reta(int p1x, int p1y, int p2x, int p2y){
     if(passoY>=0) {
       for(int z=1; z<=tamCount; z++){
         l++;
-        cout << "l: " << l << endl;
         linhas[l][j] = true;
         count--;
       }
     } else {
       for(int z=1; z<=tamCount; z++){
         l--;
-        cout << "l: " << l << endl;
         linhas[l][j] = true;
         count++;
       }
@@ -64,3 +60,61 @@ void Reta::draw(Screen &t){
     }
   }
 }
+
+// Reta::Reta(int p1x, int p1y, int p2x, int p2y){
+//   if (p1x<p2x) {
+//     setOrigem(p1x, p1y);
+//     fimX = p2x;
+//     fimY = p2y;
+//   } else if (p1x==p2x) {
+//     if(p1y<p2y) {
+//       setOrigem(p1x, p1y);
+//       fimX = p2x;
+//       fimY = p2y;
+//     } else {
+//       setOrigem(p2x, p2y);
+//       fimX = p1x;
+//       fimY = p1y;
+//     }
+//   } else {
+//     setOrigem(p2x, p2y);
+//     fimX = p1x;
+//     fimY = p1y;
+//   }
+// }
+
+// void Reta::draw(Screen &t){
+//   int linha, col;
+//   float count, tamCount, passoY;
+//   int oX = getOrigemX();
+//   int oY = getOrigemY();
+//   int distX = fimX - oX;
+//   int distY = fimY - oY;
+//   if(distX!=0) passoY = distY/distX;
+//   if(distX==0) {
+//     col = oX;
+//     for(linha=oY;linha<fimY;linha++) {
+//       cout << col << " "<< linha << endl;
+//       t.setPixel(col, linha);
+//     }
+//   } else if(distY==0) {
+//     cout << col << " "<< linha << endl;
+//     linha = oY;
+//     for(col=oX;col<fimY+1;col++) {
+//       t.setPixel(col, linha);
+//     }
+//   } else if(distY<0) {
+//     linha = oX;
+//     col = oY;
+//     count = 0;
+//     for(col=oY; col<fimY+1; col++) {
+//       count += passoY;
+//       tamCount = count;
+//       for(int i=0; i<tamCount; i++) {
+//         linha--;
+//         t.setPixel(col, linha);
+//         count--;
+//       }
+//     }
+//   }
+// }

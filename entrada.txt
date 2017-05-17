@@ -1,4 +1,4 @@
 dim 20 60
 brush #
-line 0 5 8 11
+line 0 0 10 10
 rectangle 5 0 10 50
